@@ -82,6 +82,7 @@ int main()
 	while (1) {
 		c = getch();//获取按键值并返回
 		printf("%d\n", c);
+		//多线程播放音律，为了防止重叠
 		switch (c)
 		{
 		case 49:	CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)proc, (LPVOID) "1.mp3", NULL, &id); break;
